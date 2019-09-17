@@ -1,0 +1,133 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-container{
+    width: 100vw;
+    height: 10vh;
+    background: none;
+}
+
+.site-title {
+    color: #fed136;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 25px;
+    line-height: 22px;
+    cursor: pointer;
+}
+
+ul, h4 {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h4 {
+    font-size: 28px;
+}
+
+ul {
+    width: 40vw;
+    font-size: 14.4px;
+    line-height: 21.6px;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+}
+
+ul > li:hover {
+    color: #fed136;
+    cursor: pointer;
+}
+
+
+img {
+    width: 50px;
+    filter: invert(1);
+    cursor: pointer;
+}
+.hamburger {
+    display: none;
+    border: 0;
+    border-radius: 5px;
+    justify-content: center;
+    padding: 13px;
+    font-size: 15px;
+    color: #ffffff;
+    align-items: center;
+    background: #fed136;
+}
+div.side-menu, .side-menu-open, .side-menu-close {
+    width: 100vw;
+    height: 50vh;
+    background: #212529;
+    position: relative;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    box-shadow: 3px 3px 3px 2px #212529;
+    transform: translateY(-810px);
+}
+.side-menu-open {
+    animation-name: open;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    z-index: -1;
+}
+.side-menu-close {
+    animation: close .5s forwards linear;
+    cursor: pointer;
+    z-index: -1;
+}
+
+@keyframes open {
+    to {
+        transform: translateY(0px);
+        z-index: -1;
+    }
+}
+
+@keyframes close {
+    from {
+        transform: translateY(0px);
+        z-index: -1;
+    }
+    to {
+        transform: translateY(-810px);
+        z-index: -1;
+    }
+}
+
+@media (max-width: 990px) {
+    .nav-container {
+        background: #212529;
+    }
+    li {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    div .side-menu-open .side-menu-routes {
+        font-family: 'Montserrat', sans-serif;
+        color:white;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 23px;
+        line-height: 15px;
+    }
+}
+
+@media (max-width: 380px) {
+    h1 {
+        font-size: 20px;
+    }
+    img {
+        width: 40px;
+    }
+}
