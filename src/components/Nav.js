@@ -33,9 +33,9 @@ export default class Nav extends Component {
                             <li>ABOUT</li>
                             <li>TEAM</li>
                             <li>CONTACT</li>
-                            <button className="hamburger">
+                            <button className="hamburger" onClick={this.toggle}>
                                 MENU
-                                <span onClick={this.toggle}>&#9776;</span>
+                                <span>&#9776;</span>
                             </button>
                         </ul>
                     </div>
