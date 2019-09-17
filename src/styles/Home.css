@@ -35,6 +35,7 @@
 }
 .tell-more:hover {
     background: #fec810;
+    cursor: pointer;
 }
 
 @media (max-width: 990px) {
